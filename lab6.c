@@ -86,10 +86,78 @@ int zad6()
 {
     printf("Zad6:\n");
     
-    int n;
+    int n,w,i=1;
     scanf("%d",&n);
+    while(n>=i*i)
+    {
+        w = i;
+        i++;
+    }
+    printf("%d",w);
     
+    printf("\n\n");
+    return 0;
+}
+
+int zad7()
+{
+    printf("Zad7:\n");
     
+    int n,w;
+    scanf("%d",&n);
+    for(int i=n; i*i>=n; i--)
+    {
+        w = i;
+    }
+    printf("%d",w);
+    
+    printf("\n\n");
+    return 0;
+}
+
+int zad8()
+{
+    printf("Zad8:\n");
+    
+    int a,b,c,sum=0;
+    scanf("%d%d",&a,&b);
+    for(int i=0; i<8; i++)
+    {
+        scanf("%d",&c);
+        if(b<(a+c)/2)
+            sum++;
+        a = b;
+        b = c;
+    }
+    printf("%d",sum);
+
+    printf("\n\n");
+    return 0;
+}
+
+int zad9()
+{
+    printf("Zad9:\n");
+    
+    int n,a,b,c,sum=0;
+    printf("n(>2)>>");
+    scanf("%d",&n);
+    if(n < 3) return 0;
+    printf("a1>>");
+    scanf("%d",&a);
+    printf("a2>>");
+    scanf("%d",&b);
+    for(int i=0; i<n-2; i++)
+    {
+        printf("a%d>>",i+3);
+        scanf("%d",&c);
+        if(b<(a+c)/2)
+            sum++;
+        a = b;
+        b = c;
+    }
+    printf("suma = %d",sum);
+
     printf("\n\n");
     return 0;
 }
@@ -101,6 +169,9 @@ int main()
     // zad3();
     // zad4();
     // zad5();
-    zad6();
+    // zad6();
+    // zad7();
+    // zad8();
+    zad9();
     return 0;
 }
